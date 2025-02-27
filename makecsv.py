@@ -1,5 +1,7 @@
-from functions import generate_now_datetime_string, create_raw_data
+from UserCommands import UserCommands
+from functions import set_how_long_to_fetch_data
 
-raw_data_file = f'./raw_data/{generate_now_datetime_string()}.csv'
+how_long_to_fetch_data = set_how_long_to_fetch_data()
 
+UserCommands(how_long_to_fetch_data).write_csv_file()
 
